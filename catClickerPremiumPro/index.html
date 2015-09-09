@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+	</head>
+<body>
+<div id="cat">
+    <img id="cat-img" width="400">
+    <div id="cat-info">
+        <h2 id="cat-name"></h2>
+        <p id="cat-clicks"></p>
+    </div>
+    <button id="admin-button">Admin</button>
+    <form id="admin-form">
+        <div id="admin-panel">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="text" id="image">
+            </div>
+            <div class="form-group">
+                <label for="clicks">Clicks:</label>
+                <input type="text" id="clicks">
+            </div>
+            <div class="form-group">
+                <button id="save">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<ul id="cats"></ul>
+
+	<script src="js/jquery-2.1.4.min.js"></script>	
+	<script src="js/index.js"></script>
+</body>
+</html>
