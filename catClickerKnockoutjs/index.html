@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+	</head>
+<body>
+<div id="cat" data-bind="with: currentCat">
+    <img width="400" data-bind="click: $parent.increaseClicks, attr: {src: pic}">
+    <div id="cat-info">
+        <h2 id="cat-name" data-bind="text: name"></h2>
+        <h2 data-bind="text: title"></h2>
+        <p id="cat-clicks" data-bind="text: clicks"></p>
+        <ul data-bind="foreach: nicknames">
+            <li data-bind="text: $data"></li>
+        </ul>
+    </div>
+</div>
+
+<ul id="cats" data-bind="foreach: catList">
+    <li data-bind="text: name, click: $parent.setCurrentCat, css: { current: $parent.currentCat().name === $data.name }"></li>
+</ul>
+
+	<script src="js/jquery-2.1.4.min.js"></script>	
+	<script src="js/knockout-3.3.0.js"></script>	
+	<script src="js/index.js"></script>
+</body>
+</html>
